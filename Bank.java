@@ -2,7 +2,6 @@
 // Bank account System model,Made By Shubham Patel 6-8-2020
 import java.util.Scanner;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 class Bank  // Start of the program
 {
@@ -21,33 +20,27 @@ class Bank_Account    //Second Class where all calculations Happens
       int Account_no,temp_balance,balance;
       String Account_type,name;
       int ch=1;
-      FileWriter fa = new FileWriter("test.txt");
+      
       Scanner sc = new Scanner(System.in);
           
           Bank_Account()  
             {
-           try{
+         
           System.out.println("Enter name");
           name = sc.nextLine();
-          fa.write("Name = "+ name);
+         
           
           System.out.println("Enter Account Type");
           Account_type = sc.nextLine();
-          fa.write("Account type = "+ Account_type);
+         
           System.out.println("Account Number");
           Account_no = sc.nextInt();
-          fa.write("Account Number ="+Account_no);
+         
               
           System.out.println("Balance");
           balance = sc.nextInt();
-          fa.write("Balance = "+balance);
-            
-  }catch(IOException e)
-
-  {
-    e.printStackTrace();
-  }
-            }
+         
+                     }
 
           void Transactions()  // Main Function to be Excuted
           {
@@ -64,8 +57,7 @@ class Bank_Account    //Second Class where all calculations Happens
                           temp_balance = sc.nextInt();
                           balance = balance+temp_balance;
                           System.out.println("Total Balance after deposit = "+ balance);
-                          fa.write("Total Balance after deposit = "+ balance);
-                          break;
+                                                    break;
                   case 2:
                           if(balance >=1000)
                           {
@@ -78,8 +70,7 @@ class Bank_Account    //Second Class where all calculations Happens
                             }
                             balance = balance - temp_balance;
                             System.out.println("The Current Balance is = " +balance);
-                            fa.write("The Current Balance after widrawl is = " +balance);
-                            
+                                                 
                           }
                           
                           else
